@@ -1,0 +1,99 @@
+{
+	"info": {
+		"_postman_id": "07b4201a-4a27-422f-b7dc-31c8d784ded2",
+		"name": "Microservice",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "https://run.mocky.io/v3/83be1c84-39b8-42b3-8015-0a9b48b6e07e",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "6b8d2d91-3697-46f5-9a6e-431e35141d5a",
+						"exec": [
+							"\r",
+							"pm.test(\"Status code is 201\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Response time is less than 200ms\", function () {\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(1000);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Content type is present\", function () {\r",
+							"    pm.response.to.have.header(\"token\");\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://run.mocky.io/v3/9f5b0d84-06ea-46e1-a684-54eb2e45e214",
+					"protocol": "https",
+					"host": [
+						"run",
+						"mocky",
+						"io"
+					],
+					"path": [
+						"v3",
+						"9f5b0d84-06ea-46e1-a684-54eb2e45e214"
+					]
+				},
+				"description": "request1"
+			},
+			"response": []
+		},
+		{
+			"name": "integration test",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "6b8d2d91-3697-46f5-9a6e-431e35141d5a",
+						"exec": [
+							"\r",
+							"pm.test(\"Status code is 201\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Response time is less than 200ms\", function () {\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(1000);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Content type is present\", function () {\r",
+							"    pm.response.to.have.header(\"token\");\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://run.mocky.io/v3/9f5b0d84-06ea-46e1-a684-54eb2e45e214",
+					"protocol": "https",
+					"host": [
+						"run",
+						"mocky",
+						"io"
+					],
+					"path": [
+						"v3",
+						"9f5b0d84-06ea-46e1-a684-54eb2e45e214"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
